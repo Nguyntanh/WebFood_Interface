@@ -1,0 +1,951 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #FC8A06;
+    transform: scale(1.05);
+}
+
+.MainContainer {
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    position: relative;
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.logo1 {
+    width: 215px;
+    height: 53px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo1:hover {
+    transform: scale(1.1);
+}
+
+.menu {
+    display: flex;
+    gap: 60px;
+}
+
+.menu-item:hover {
+    color: #FC8A06;
+    text-decoration: underline;
+}
+
+.login_signup {
+    width: 200px;
+    height: 40px;
+    border-radius: 120px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    background-color: black;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login_signup:hover {
+    background-color: #FC8A06;
+    transform: scale(1.05);
+}
+
+.male_user {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.login_signup:hover .male_user {
+    transform: rotate(360deg);
+}
+
+.login_signup_text {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.content1 {
+    position: relative;
+    width: 1216px;
+    height: 500px;
+    top: 100px;
+    background-color: #FBFBFB;
+    border: 1px solid #00000033;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.orange_box {
+    position: absolute;
+    width: 40%;
+    height: 90%;
+    background-color: #FC8A06;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    border-radius: 50% 0 20px 0;
+}
+
+.girl_noodle {
+    position: absolute;
+    height: 360px;
+    bottom: 0;
+    right: 230px;
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+
+.girl_noodle:hover {
+    transform: translateY(-10px);
+}
+
+.girl_pizza {
+    position: absolute;
+    height: 420px;
+    bottom: 0;
+    right: 320px;
+    z-index: 4;
+    transition: transform 0.3s ease;
+}
+
+.girl_pizza:hover {
+    transform: translateY(-10px);
+}
+
+.number_one {
+    position: absolute;
+    width: 15px;
+    height: 40px;
+    top: 80px;
+    right: 130px;
+    z-index: 3;
+}
+
+.number_two {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    top: 230px;
+    right: 50px;
+    z-index: 3;
+}
+
+.number_three {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    bottom: 90px;
+    right: 100px;
+    z-index: 3;
+}
+
+.content_box1 {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    top: 120px;
+    right: 110px;
+    z-index: 4;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.content_box1:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.content_box2 {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    top: 270px;
+    right: 30px;
+    z-index: 4;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.content_box2:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.content_box3 {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    bottom: 30px;
+    right: 80px;
+    z-index: 4;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.content_box3:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.order_img {
+    width: 60px;
+}
+
+.content_box_text1 {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.content_box_text2 {
+    font-size: 10px;
+}
+
+.content_text1 {
+    position: absolute;
+    width: 350px;
+    top: 140px;
+    left: 50px;
+    z-index: 3;
+    font-size: 14.3px;
+    padding: 2px;
+}
+
+.content_text2 {
+    position: absolute;
+    width: 420px;
+    top: 170px;
+    left: 50px;
+    z-index: 3;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.content_search_box {
+    position: absolute;
+    width: 320px;
+    height: 80px;
+    top: 300px;
+    left: 50px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content_search_box_text {
+    font-size: 11px;
+}
+
+.search_input_box {
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #606060;
+    width: 310px;
+    padding: 0 5px 0 5px;
+    background-color: #FFFFFF;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search_input_box:hover {
+    border-color: #FC8A06;
+    box-shadow: 0 0 5px rgba(252, 138, 6, 0.5);
+}
+
+.search_input {
+    height: 50px;
+    border: none;
+    outline: none;
+    width: 300px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.search_input:focus {
+    background-color: #F5F5F5;
+}
+
+.search_button {
+    position: absolute;
+    height: 50px;
+    width: 150px;
+    top: 23px;
+    left: 171px;
+    background-color: #FC8A06;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search_button:hover {
+    background-color: #E07B05;
+    transform: scale(1.05);
+}
+
+.content2 {
+    position: relative;
+    width: 1216px;
+    height: 300px;
+    top: 200px;
+    background-color: #FFFFFF;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content2_title {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0 0 10px;
+}
+
+.content2_slide {
+    width: 1216px;
+    height: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content2_box1 {
+    width: 194px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #4646461a;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content2_box1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content2_box_text {
+    width: 194px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 0 0 20px;
+}
+
+.content2_box_text_name {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.content2_box_text_count_restaurants {
+    font-size: 14px;
+    color: #FC8A06;
+}
+
+.content3 {
+    position: relative;
+    width: 1216px;
+    height: 300px;
+    top: 300px;
+    background-color: #FFFFFF;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content3_title {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0 0 10px;
+}
+
+.content3_slide {
+    width: 1216px;
+    height: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content3_box1 {
+    width: 194px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #4646461a;
+    border-radius: 10px;
+    background-color: #FC8A06;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content3_box1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content3_box_text {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    position: relative;
+    width: 1216px;
+    height: 400px;
+    top: 400px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_content1 {
+    width: 1216px;
+    height: 350px;
+    background-color: #FBFBFB;
+    border: 1px solid #0000001A;
+}
+
+.footer_content2 {
+    width: 1216px;
+    height: 50px;
+    background-color: #000000;
+    border: 1px solid #0000001A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #606060;
+}
+
+/* Responsive for Tablets (600px - 900px) */
+@media screen and (max-width: 900px) {
+    .hamburger {
+        display: none;
+    }
+
+    .header {
+        height: 50px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .logo1 {
+        width: 150px;
+        height: 37px;
+    }
+
+    .menu {
+        gap: 30px;
+        font-size: 14px;
+    }
+
+    .login_signup {
+        width: 150px;
+        height: 35px;
+        gap: 8px;
+    }
+
+    .male_user {
+        width: 25px;
+        height: 25px;
+    }
+
+    .login_signup_text {
+        font-size: 16px;
+    }
+
+    .content1 {
+        width: 90%;
+        max-width: 700px;
+        height: auto;
+        top: 80px;
+        padding: 15px;
+    }
+
+    .orange_box {
+        width: 50%;
+        height: 40%;
+    }
+
+    .girl_noodle {
+        height: 200px;
+        right: 10%;
+    }
+
+    .girl_pizza {
+        height: 250px;
+        right: 20%;
+    }
+
+    .number_one {
+        width: 12px;
+        height: 30px;
+        top: 60px;
+        right: 10%;
+    }
+
+    .number_two {
+        width: 15px;
+        height: 30px;
+        top: 150px;
+        right: 5%;
+    }
+
+    .number_three {
+        width: 15px;
+        height: 30px;
+        bottom: 50px;
+        right: 8%;
+    }
+
+    .content_box1 {
+        width: 200px;
+        height: auto;
+        top: 100px;
+        right: 10%;
+        padding: 10px;
+    }
+
+    .content_box2 {
+        width: 200px;
+        height: auto;
+        top: 220px;
+        right: 5%;
+        padding: 10px;
+    }
+
+    .content_box3 {
+        width: 200px;
+        height: auto;
+        bottom: 20px;
+        right: 8%;
+        padding: 10px;
+    }
+
+    .order_img {
+        width: 50px;
+    }
+
+    .content_text1 {
+        width: 100%;
+        max-width: 300px;
+        top: 120px;
+        left: 20px;
+        font-size: 13px;
+    }
+
+    .content_text2 {
+        width: 100%;
+        max-width: 350px;
+        top: 150px;
+        left: 20px;
+        font-size: 30px;
+    }
+
+    .content_search_box {
+        width: 100%;
+        max-width: 280px;
+        top: 250px;
+        left: 20px;
+    }
+
+    .search_input_box {
+        width: 100%;
+        max-width: 270px;
+        height: 45px;
+    }
+
+    .search_input {
+        width: 100%;
+        height: 45px;
+    }
+
+    .search_button {
+        width: 120px;
+        height: 45px;
+        top: 20px;
+        left: auto;
+        right: 5px;
+    }
+
+    .content2 {
+        width: 90%;
+        max-width: 700px;
+        height: auto;
+        top: 150px;
+        padding: 15px 0;
+    }
+
+    .content2_title {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .content2_slide {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .content2_box1 {
+        width: 160px;
+        height: 200px;
+    }
+
+    .content2_box_text {
+        width: 100%;
+        padding: 0 0 0 15px;
+    }
+
+    .content2_box_text_name {
+        font-size: 14px;
+    }
+
+    .content2_box_text_count_restaurants {
+        font-size: 12px;
+    }
+
+    .content3 {
+        width: 90%;
+        max-width: 700px;
+        height: auto;
+        top: 200px;
+        padding: 15px 0;
+    }
+
+    .content3_title {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .content3_slide {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .content3_box1 {
+        width: 160px;
+        height: 180px;
+    }
+
+    .content3_box_text {
+        font-size: 14px;
+    }
+
+    .footer {
+        width: 90%;
+        max-width: 700px;
+        top: 250px;
+        height: auto;
+    }
+
+    .footer_content1 {
+        width: 100%;
+        height: 200px;
+    }
+
+    .footer_content2 {
+        width: 100%;
+        height: 40px;
+        font-size: 12px;
+    }
+}
+
+/* Responsive for Mobile (below 600px) */
+@media screen and (max-width: 600px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .header {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        width: 250px;
+        transform: translateX(-100%);
+        background-color: #f8f8f8;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .header.active {
+        transform: translateX(0);
+    }
+
+    .logo1 {
+        width: 120px;
+        height: 30px;
+        margin: 0 auto;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .login_signup {
+        width: 120px;
+        height: 30px;
+        margin: 0 auto;
+        gap: 5px;
+    }
+
+    .male_user {
+        width: 20px;
+        height: 20px;
+    }
+
+    .login_signup_text {
+        font-size: 14px;
+    }
+
+    .content1 {
+        width: 90%;
+        max-width: 100%;
+        top: 60px;
+        padding: 10px;
+        height: auto;
+    }
+
+    .orange_box {
+        display: none;
+    }
+
+    .girl_noodle, .girl_pizza {
+        display: none;
+    }
+
+    .number_one, .number_two, .number_three {
+        display: none;
+    }
+
+    .content_box1, .content_box2, .content_box3 {
+        position: relative;
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        margin: 10px auto;
+        padding: 10px;
+        top: auto;
+        right: auto;
+        bottom: auto;
+    }
+
+    .content_text1 {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        top: auto;
+        left: auto;
+        font-size: 12px;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .content_text2 {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        top: auto;
+        left: auto;
+        font-size: 24px;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .content_search_box {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        top: auto;
+        left: auto;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .search_input_box {
+        width: 100%;
+        max-width: 100%;
+        height: 40px;
+    }
+
+    .search_input {
+        width: 100%;
+        height: 40px;
+    }
+
+    .search_button {
+        position: relative;
+        width: 100px;
+        height: 40px;
+        top: auto;
+        left: auto;
+        margin: 10px auto;
+    }
+
+    .content2 {
+        width: 90%;
+        max-width: 100%;
+        top: 100px;
+        padding: 10px 0;
+    }
+
+    .content2_title {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .content2_slide {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .content2_box1 {
+        width: 140px;
+        height: 180px;
+    }
+
+    .content2_box_text {
+        width: 100%;
+        padding: 0 0 0 10px;
+    }
+
+    .content2_box_text_name {
+        font-size: 13px;
+    }
+
+    .content2_box_text_count_restaurants {
+        font-size: 11px;
+    }
+
+    .content3 {
+        width: 90%;
+        max-width: 100%;
+        top: 150px;
+        padding: 10px 0;
+    }
+
+    .content3_title {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .content3_slide {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .content3_box1 {
+        width: 140px;
+        height: 160px;
+    }
+
+    .content3_box_text {
+        font-size: 13px;
+    }
+
+    .footer {
+        width: 90%;
+        max-width: 100%;
+        top: 200px;
+    }
+
+    .footer_content1 {
+        width: 100%;
+        height: 150px;
+    }
+
+    .footer_content2 {
+        width: 100%;
+        height: 40px;
+        font-size: 10px;
+    }
+}
